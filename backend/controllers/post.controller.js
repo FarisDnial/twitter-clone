@@ -16,12 +16,12 @@ export const createPost = async (req, res) => {
         }
 
         if (!text && !img) {
-            return res.status(404).json({ message: "Post must have text or Image" });
+            return res.status(404).json({ error: "Post must have text or Image" });
         }
 
         if (img) {
-            const uploadResponse = await cloudinary.uploader(img)
-            img = uploadResponse.secure_url;
+            const uploadedResponse = await cloudinary.uploader.upload(img)
+            img = uploadedResponse.secure_url;
         }
 
         const newPost = new Post({
@@ -110,7 +110,7 @@ export const likeUnlikePost = async (req, res) => {
             // Unlike post
             await Post.updateOne({ _id: postId }, { $pull: { likes: userId } });
             await User.updateOne({ _id: userId }, { $pull: { likedPosts: postId } });
-            res.status(200).json({ error: "Post unliked successfully" });
+            res.status(200).json({ message: "Post unliked successfully" });
 
         } else {
             // like post
@@ -192,7 +192,7 @@ export const getFollowingPosts = async (req, res) => {
         const following = user.following;
 
         const feedPosts = await Post.find({ user: { $in: following } })
-            .sort({ created: -1 })
+            .sort({ createdAt: -1 })
             .populate({
                 path: "user",
                 select: "-password",
@@ -202,7 +202,7 @@ export const getFollowingPosts = async (req, res) => {
                 select: "-password",
             });
 
-        res.status(200).json({ feedPosts });
+        res.status(200).json(feedPosts);
     } catch (error) {
         console.log("Error in getFollowingPosts controller: ", error.message);
         res.status(500).json({ error: "Internal server error" });
