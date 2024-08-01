@@ -1,9 +1,15 @@
 
 import { MdHomeFilled } from "react-icons/md";
 import { IoNotifications } from "react-icons/io5";
-import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { BiLogOut } from "react-icons/bi";
+import { CiCircleMore } from "react-icons/ci";
+import { BsPeople, BsPerson } from "react-icons/bs";
+import { IoBookmarkOutline } from "react-icons/io5";
+import { RiFileListLine } from "react-icons/ri";
+import { TbMail } from "react-icons/tb"
+
+
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
 
@@ -61,7 +67,7 @@ const Sidebar = () => {
                             to='/notifications'
                             className='flex gap-3 items-center hover:bg-stone-900 transition-all rounded-full duration-300 py-2 pl-2 pr-4 max-w-fit cursor-pointer'
                         >
-                            <IoNotifications className='w-6 h-6' />
+                            <IoNotifications className='w-8 h-8' />
                             <span className='text-lg hidden md:block'>Notifications</span>
                         </Link>
                     </li>
@@ -71,8 +77,53 @@ const Sidebar = () => {
                             to={`/profile/${authUser?.username}`}
                             className='flex gap-3 items-center hover:bg-stone-900 transition-all rounded-full duration-300 py-2 pl-2 pr-4 max-w-fit cursor-pointer'
                         >
-                            <FaUser className='w-6 h-6' />
+                            <BsPerson className='w-8 h-8' />
                             <span className='text-lg hidden md:block'>Profile</span>
+                        </Link>
+                    </li>
+
+                    <li className='flex justify-center md:justify-start'>
+                        <Link
+                            className='flex gap-3 items-center hover:bg-stone-900 transition-all rounded-full duration-300 py-2 pl-2 pr-4 max-w-fit cursor-pointer'
+                        >
+                            <TbMail className='w-8 h-8' />
+                            <span className='text-lg hidden md:block'>Messages</span>
+                        </Link>
+                    </li>
+
+                    <li className='flex justify-center md:justify-start'>
+                        <Link
+                            className='flex gap-3 items-center hover:bg-stone-900 transition-all rounded-full duration-300 py-2 pl-2 pr-4 max-w-fit cursor-pointer'
+                        >
+                            <RiFileListLine className='w-8 h-8' />
+                            <span className='text-lg hidden md:block'>List</span>
+                        </Link>
+                    </li>
+
+                    <li className='flex justify-center md:justify-start'>
+                        <Link
+                            className='flex gap-3 items-center hover:bg-stone-900 transition-all rounded-full duration-300 py-2 pl-2 pr-4 max-w-fit cursor-pointer'
+                        >
+                            <IoBookmarkOutline className='w-8 h-8' />
+                            <span className='text-lg hidden md:block'>Bookmarks</span>
+                        </Link>
+                    </li>
+
+                    <li className='flex justify-center md:justify-start'>
+                        <Link
+                            className='flex gap-3 items-center hover:bg-stone-900 transition-all rounded-full duration-300 py-2 pl-2 pr-4 max-w-fit cursor-pointer'
+                        >
+                            <BsPeople className='w-8 h-8' />
+                            <span className='text-lg hidden md:block'>Communities</span>
+                        </Link>
+                    </li>
+
+                    <li className='flex justify-center md:justify-start'>
+                        <Link
+                            className='flex gap-3 items-center hover:bg-stone-900 transition-all rounded-full duration-300 py-2 pl-2 pr-4 max-w-fit cursor-pointer'
+                        >
+                            <CiCircleMore className='w-8 h-8' />
+                            <span className='text-lg hidden md:block'>More</span>
                         </Link>
                     </li>
                 </ul>
