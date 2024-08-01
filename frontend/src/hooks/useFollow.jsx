@@ -26,7 +26,7 @@ const useFollow = () => {
         onSuccess: () => {
             Promise.all([
                 queryClient.invalidateQueries({ queryKey: ["suggestedUsers"] }), // to update the right panel following list
-                queryClient.invalidateQueries({ queryKey: ["authUsers"] }) // to update profile user follow button
+                queryClient.invalidateQueries({ queryKey: ["authUser"] }) // to update profile user follow button
             ])
             toast.success("User followed sucessfully");
         },
