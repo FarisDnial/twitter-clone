@@ -6,26 +6,26 @@ A social media platform for connecting with friends and sharing updates, featuri
 
 ## Features
 
-- **Authentication**
+- 🔐 **Authentication**
   - Secure user authentication using JSON Web Tokens (JWT).
 - **User Interaction**
-  - Suggests users to follow based on interests and activities.
-  - Create, edit, and delete posts.
-  - Like and comment on posts.
-  - Edit profile information, including cover and profile images.
-- **Media Management**
+  - 👥 Suggests users to follow based on interests and activities.
+  - ✍️ Create, edit, and 🗑️ delete posts.
+  - ❤️ Like and 💬 comment on posts.
+  - 📝 Edit profile information, including cover and profile images.
+- 📷 **Media Management**
   - Upload images using Cloudinary.
-- **Notifications**
+- 🔔 **Notifications**
   - Receive notifications for likes, comments, and follows.
 - **Data Management**
   - Integrated with MongoDB for storing user data, posts, comments, likes, and more.
 
-## Tech Stack
+## ⚛️ Tech Stack
 
 - **Frontend:** React.js, Tailwind CSS, jQuery
 - **Backend:** Node.js, Express
 - **Database:** MongoDB
-- **Other:** JSON Web Tokens (JWT), React Query, Cloudinary
+- **Other:** JSON Web Tokens (JWT), 🔥 React Query, Cloudinary
 
 ## Usage
 
@@ -39,10 +39,6 @@ After setting up and running the application, you can:
 ## Contributing
 
 Contributions are welcome! Please fork this repository and submit a pull request for any new features, improvements, or bug fixes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
