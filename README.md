@@ -9,7 +9,7 @@ A social media platform for connecting with friends and sharing updates, featuri
 - 🔐 **Authentication**
   - Secure user authentication using JSON Web Tokens (JWT).
 - **User Interaction**
-  - 👥 Suggests users to follow based on interests and activities.
+  - 👥 Suggests users to follow.
   - ✍️ Create, edit, and 🗑️ delete posts.
   - ❤️ Like and 💬 comment on posts.
   - 📝 Edit profile information, including cover and profile images.
@@ -17,7 +17,7 @@ A social media platform for connecting with friends and sharing updates, featuri
   - Upload images using Cloudinary.
 - 🔔 **Notifications**
   - Receive notifications for likes, comments, and follows.
-- **Data Management**
+- 🗂️ **Data Management**
   - Integrated with MongoDB for storing user data, posts, comments, likes, and more.
 
 ## ⚛️ Tech Stack
