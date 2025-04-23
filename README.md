@@ -36,6 +36,10 @@ After setting up and running the application, you can:
 - Create posts and interact with others' posts.
 - Edit your profile and upload images.
 
+- Mock Account :
+- Username: FrsDnl
+- Password: 123456
+
 ## Contributing
 
 Contributions are welcome! Please fork this repository and submit a pull request for any new features, improvements, or bug fixes.
